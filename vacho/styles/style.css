@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap");
+
+:root {
+  --font: "Shippori Antique", sans-serif;
+}
+* {
+  margin: 0;
+}
+
+body {
+  background-color: rgb(43, 43, 43);
+}
+
+.mainBody {
+  margin: auto;
+  border-radius: 30px;
+  width: 50%;
+  height: 80vh;
+  margin-top: 6vh;
+  padding: 10px;
+  background-color: white;
+}
+
+.mainBody h1 {
+  font-family: var(--font);
+  text-align: center;
+  padding-top: 1vh;
+}
+
+.mainBody p {
+  font-family: var(--font);
+  font-size: 12;
+  padding: 3vh;
+}
+
+.navBar li {
+  list-style: none;
+  display: inline;
+  padding: 1vh;
+}
+
+.navBar li a {
+  text-decoration: none;
+  font-family: var(--font);
+  color: black;
+  font-weight: 400;
+}
+
+.navBar li a:hover {
+  transition-duration: 0.2s;
+  color: rgb(99, 98, 98);
+  font-weight: 500;
+}
+
+.navBar {
+  background-color: #fff;
+  border-bottom: 1.7px solid rgb(155, 155, 155);
+  padding-bottom: 2vh;
+  padding-top: 2vh;
+}

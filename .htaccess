@@ -1,0 +1,6 @@
+ErrorDocument 400 /htdocs/errors/400.php
+ErrorDocument 401 /htdocs/errors/401.php
+ErrorDocument 403 /htdocs/errors/403.php
+ErrorDocument 404 /htdocs/errors/404.php
+ErrorDocument 500 /htdocs/errors/500.php
+Options All -Indexes
