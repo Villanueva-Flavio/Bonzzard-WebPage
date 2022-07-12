@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<?php $die_prevent = 0; ?>
+<?php $die_prevent = 1; ?>
 <html>
 	<head>
 		<title>Bonzzard > Home</title>
