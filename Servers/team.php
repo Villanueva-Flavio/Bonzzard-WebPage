@@ -18,7 +18,7 @@
 
     <script>
         new fullpage('#fullpage', {
-            licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+            licenseKey: null,
             scrollBar: false,
             navigation: true,
             navigationTooltips: ['Team', 'About', 'Contact'],
