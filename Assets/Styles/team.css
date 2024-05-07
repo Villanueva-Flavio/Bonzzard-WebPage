@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&family=Rubik+Doodle+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Moirai+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+body{
+    width: 100vw;
+    max-height: 300vh;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: ease-in-out 0.5s;
+}
+
+
+#fp-nav.fp-right ul{
+    top: 3%;
+    position: absolute;
+    padding-right: 40px;
+    margin-left: -20px;
+    margin-top: -20px;
+    text-indent: -9999px;
+    font-size: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    animation: neon-pulse 10s infinite alternate;
+    filter: brightness(3000%) saturate(250%) contrast(130%);
+}
+
+#fp-nav.fp-right ul{
+    color: transparent;
+}
+
+.fp-viewing-0 ul li:nth-child(1) a:nth-child(1), .fp-viewing-1 ul li:nth-child(2) a:nth-child(1), .fp-viewing-2 ul li:nth-child(3) a:nth-child(1){
+    background-size: 1%;
+    background-position: 100%;
+    transition: ease-in-out 0.5s;
+    font-size: 35px;
+    color: transparent;
+    background: url("https://lambdaclass.com/assets/color-9b305a95.gif");
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+body::before {
+    content: "";
+    background-image: url('./Elements/Backgrounds/background-image.png');
+    z-index: -1;
+    background-size: 30vh 40%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    width: 100%;
+    height: 100%;
+    animation: neon-pulse 10s infinite alternate;
+    position: fixed;
+    filter: brightness(3000%) saturate(250%) contrast(130%);
+}
+
+@keyframes neon-pulse {
+    0%   { filter: drop-shadow(0px 0px 30px #ff0000); }
+    20%  { filter: drop-shadow(0px 0px 30px #ffb6c1); }
+    40%  { filter: drop-shadow(0px 0px 35px #00ff00); }
+    60%  { filter: drop-shadow(0px 0px 30px #ffb6c1); }
+    80%  { filter: drop-shadow(0px 0px 35px #0000ff); }
+    100% { filter: drop-shadow(0px 0px 35px #ffb6c1); }
+}
+
+.section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#Team, #About, #Contact {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#Team { background: linear-gradient(to bottom, #5d10be, #490995); }
+#About { background: linear-gradient(to bottom, #490995, #27064e); }
+#Contact { background: linear-gradient(to bottom, #27064e, #0d0118); }
+
+.title{
+    color: transparent;
+    font-family: "Rubik Doodle Shadow", system-ui;
+    font-size: 10vh;
+    width: 100vw;
+    margin-left: 0%;
+    margin-bottom: 0px;
+    background: url("https://lambdaclass.com/assets/color-9b305a95.gif");
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-align: center;
+    -webkit-box-reflect: below 5px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255, 255, 255, 0.6)));
+}
+
+.team-container{
+    width: 90%;
+    margin-left: 10%;
+    position: relative;
+    height: 505px;
+}
+
+.image-container{
+    width: 100%;
+    height: 300px;
+    float: left;
+    display: flex;
+    margin-top: 4%;
+    -webkit-box-reflect: below 5px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255, 255, 255, 0.6)));
+}   
+
+.name-container{
+    display: flex;
+    position: relative;
+    width: 100%;  
+    margin-top: 280px;
+}
+
+.one, .two, .three{
+    height: 100%;
+    width: 30%;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s ease-in-out;
+}
+
+.one{
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+    background: url("./Elements/Images/zenyatta1-logo.png") no-repeat center;
+}
+
+.two{
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    background: url("./Elements/Images/pozzard1-logo.png") no-repeat center;
+}
+
+.three{
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    background: url("./Elements/Images/bonshot1-logo.png") no-repeat center;
+}
+
+.one:hover, .two:hover, .three:hover{
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s ease-in-out;
+}
+
+.one:hover{
+    background: url("./Elements/Images/zenyatta2-logo.png") no-repeat center;
+}
+
+.two:hover{
+    background: url("./Elements/Images/pozzard2-logo.png") no-repeat center;
+}
+
+.three:hover{
+    background: url("./Elements/Images/bonshot2-logo.png") no-repeat center;
+}
+
+.name-one, .name-two, .name-three{
+    background-size: 150%;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.7);
+    background-position: left;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 5vw;
+    text-align: center;
+    float: left;
+    width: 25%;
+    margin-left: 3%;
+    height: 25%;
+    color: transparent;
+    background: url("https://ecard.enter-media.org/upload/iblock/484/4842b4081cf17f58af869f76d9f7b122.gif");
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.role-one, .role-two, .role-three{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2vw;
+    text-align: center;
+    float: left;
+    width: 25%;
+    margin-left: 4%;
+    height: 25%;
+    color: white;
+    text-shadow: black 0px 0px 10px;
+}
+
+.about-container{
+    width: 60%;
+    margin-left: 20%;
+    position: relative;
+    line-height: 2;
+    text-align: justify;
+
+}
+
+
+
+.about-text{
+    font-family: "Bebas Neue", sans-serif;
+    color: white;
+    text-shadow: black 0px 0px 10px;
+    font-size: 2vw;
+}
+
+@media (max-width:960px) {
+    .about-text{
+        font-size: 2vh;
+    }
+}
+
+.contact-container{
+    width: 60%;
+    margin-top: 3%;
+    margin-left: 20%;
+    position: relative;
+    line-height: 2;
+    text-align: justify;
+    display:inline-block;
+}
+
+.label-name, .label-email, .label-message{
+    font-family: "Bebas Neue", sans-serif;
+    text-shadow: black 0px 0px 10px;
+    font-size: 2vw;
+    color: white;
+    position: absolute;
+}
+
+.input-name, .input-email, .input-message{
+    margin-left: 12%;
+    font-family: "Fredoka", sans-serif;
+    font-size: 2vw;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid white;
+    width: 80%;
+    margin-top: 1%;
+    padding: 1%;
+}
+
+.input-message{
+    height: 300px;
+    margin-bottom: 1%;
+}
+
+.submit-button{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2vw;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid white;
+    width: 15%;
+    margin-left: 12%;
+    cursor: pointer;
+
+}
+
+textarea{
+    resize: none;
+}
+
+@media (max-width:960px) {
+    .label-name, .label-email, .label-message{
+        font-size: 2vh;
+    }
+
+    .input-name, .input-email, .input-message{
+        font-size: 2vh;
+        margin-left: 15%;
+    }
+
+    .contact-container{
+        width: 90%;
+        height: 50%;
+        margin-left: 4%;
+        padding-left: 2%;
+    }
+
+    .input-message{
+        height: 570px;
+    }
+
+    .submit-button{
+        position: absolute;
+        font-size: 2vh;
+        width: 15%;
+        margin-left: -96.5%;
+        margin-top: 83%;
+    }
+}

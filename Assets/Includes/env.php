@@ -1,0 +1,9 @@
+<?php
+    include_once('Utils/die.php');
+    putenv("DB_IP=localhost");
+    putenv("DB_HOST=webDatabase");
+    putenv("DB_USER=WEB-Fetcher");
+    putenv("DB_PASSWORD=ChikaFujiwara23");
+    putenv("WORK_TABLE=work");
+    putenv("SEVER_TABLE=servers");
+?>

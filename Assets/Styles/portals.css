@@ -1,0 +1,38 @@
+body {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-color: black;
+    /* background-image: url('../styles/images/bg03.jpg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body::before {
+    content: "";
+    background-image: url('./Elements/Backgrounds/background-image.png');
+    z-index: -1;
+    background-size: 30vh 40%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    width: 100%;
+    height: 100%;
+    animation: neon-pulse 10s infinite alternate;
+    position: absolute;
+    filter: brightness(3000%) saturate(250%) contrast(130%);
+}
+
+@keyframes neon-pulse {
+    0%   { filter: drop-shadow(0px 0px 30px #ff0000); }
+    20%  { filter: drop-shadow(0px 0px 30px #ffb6c1); }
+    40%  { filter: drop-shadow(0px 0px 35px #00ff00); }
+    60%  { filter: drop-shadow(0px 0px 30px #ffb6c1); }
+    80%  { filter: drop-shadow(0px 0px 35px #0000ff); }
+    100% { filter: drop-shadow(0px 0px 35px #ffb6c1); }
+}
+
+div[id^="canvas-container"]{
+    width: 400px; 
+    height:450px;
+    display: inline-block;
+}

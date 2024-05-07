@@ -1,6 +1,8 @@
-ErrorDocument 400 /htdocs/errors/400.php
-ErrorDocument 401 /htdocs/errors/401.php
-ErrorDocument 403 /htdocs/errors/403.php
-ErrorDocument 404 /htdocs/errors/404.php
-ErrorDocument 500 /htdocs/errors/500.php
-Options All -Indexes
+ErrorDocument 400 /Assets/Includes/Errors/400.php
+ErrorDocument 401 /Assets/Includes/Errors/401.php
+ErrorDocument 403 /Assets/Includes/Errors/403.php
+ErrorDocument 404 /Assets/Includes/Errors/404.php
+ErrorDocument 500 /Assets/Includes/Errors/500.php
+Options -Indexes
+Redirect 301 /Discord https://discord.gg/QskYJQAtcx
+Redirect 301 /Regalito https://www.youtube.com/watch?v=dQw4w9WgXcQ

@@ -1,0 +1,75 @@
+.bg400{
+    width: auto;
+    height: auto;
+    color: rgb(26, 26, 26);
+    background: linear-gradient(to left, rgba(240,184,196,1) 50%, rgba(93,31,125,1) 90% ) right ;
+    background-size: 200%;
+    transition: 5s ease-out;
+}
+.bg400:hover{
+    background-position: left;
+    transition: 5s ease-out;
+}
+/* --------------------------------------------------------------------------------------------- */
+
+.bg404{
+    width: auto;
+    height: auto;
+    color: rgb(26, 26, 26);
+    background: linear-gradient(to left, rgb(9, 54, 90) 50%, rgba(20,139,175,1) 90% ) right ;
+    background-size: 200%;
+    transition: 5s ease-out;
+}
+.bg404:hover{
+    background-position: left;
+    transition: 5s ease-out;
+}
+/* --------------------------------------------------------------------------------------------- */
+
+.bg500{
+    width: auto;
+    height: auto;
+    color: rgb(26, 26, 26);
+    background: linear-gradient(to left, #ffe6d0 50%, #c66454 90% ) right ;
+    background-size: 200%;
+    transition: 5s ease-out;
+}
+.bg500:hover{
+    background-position: left;
+    transition: 5s ease-out;
+}
+/* --------------------------------------------------------------------------------------------- */
+
+.bg403{
+    width: auto;
+    height: auto;
+    color: rgb(26, 26, 26);
+    background: linear-gradient(to left, #fe8c94 50%, #ffe1e0 90% ) right ;
+    background-size: 200%;
+    transition: 5s ease-out;
+}
+.bg403:hover{
+    background-position: left;
+    transition: 5s ease-out;
+}
+/* --------------------------------------------------------------------------------------------- */
+
+.bg401{
+    width: auto;
+    height: auto;
+    color: rgb(26, 26, 26);
+    background: linear-gradient(to left, rgba(197, 97, 124,1) 50%, rgba(197, 36, 79,1) 90% ) right ;
+    background-size: 200%;
+    transition: 1s ease-out;
+}
+.bg401:hover{
+    background-position: left;
+    transition: 1s ease-out;
+}
+
+.image_error{
+    position: fixed;
+    width:100%;
+    left: 0;
+    bottom: -0.5%;
+}
