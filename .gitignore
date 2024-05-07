@@ -1,7 +1,3 @@
-sql_test.php
-htdocs/includes/sql_connect.php
-flaviovillanueva/espacio_estudiantil
-flaviovillanueva/mc_server_web
-flaviovillanueva/jstest
-flaviovillanueva/Minecraft-RCON
-flaviovillanueva/test-nini.php
+./Admin/Linux_Control_Panel
+./Admin/Minecraft_Control_Panel
+./Admin/Stock_Management_Tool
