@@ -1,3 +1,5 @@
+
+<?php include_once('Utils/die.php'); ?>
 <div id="Team" class="section">
     <p class="title">  Meet the team </p>
     <div class="team-container">
@@ -14,8 +16,8 @@
         </div>
 
         <div>
-            <div class ="role-one">Hosting</div>
-            <div class ="role-two">Owner</div>
+            <div class ="role-one">Mentoring & Ex-Host</div>
+            <div class ="role-two">Owner & Dev</div>
             <div class ="role-three">Co-Owner</div>
         </div>
     </div>

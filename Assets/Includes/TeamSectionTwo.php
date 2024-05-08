@@ -1,3 +1,4 @@
+<?php include_once('Utils/die.php'); ?>
 <div id="About" class="section">
     <p class="title">About Bonzzard</p>
     <div class="about-container">

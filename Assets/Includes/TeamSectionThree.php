@@ -1,3 +1,4 @@
+<?php include_once('Utils/die.php'); ?>
 <div id="Contact" class="section">
     <p class="title">Contact Us</p>
     <div class="contact-container">
