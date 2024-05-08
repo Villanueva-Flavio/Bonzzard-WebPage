@@ -11,7 +11,7 @@
 </head>
 <body>
     <div>
-    </div id="fullpage">
+    </div id="team-website-container">
             <div id="Team" class="section">
             <p class="title">  Meet the team </p>
             <div class="team-container">
@@ -82,22 +82,32 @@
     }
 ?>
 
-
     <script>
-        // Función para desplazarse suavemente a una sección al hacer clic en un enlace
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
+    $(document).ready(function(){
+        var about = $("#About").offset().top;
+        var team = $("#Team").offset().top;
+        var contact = $("#Contact").offset().top;
 
-                const targetId = this.getAttribute('href').substring(1); // Obtener el ID de la sección a la que queremos desplazarnos
+        var height = $(document).scrollTop();
+        var timeout = false; 
+        var scroll = height;
 
-                document.getElementById(targetId).scrollIntoView({
-                    behavior: 'smooth' // Desplazamiento suave
-                });
-            });
+        $(document).scroll(function(){
+            if (timeout !== false) clearTimeout(timeout);
+            timeout = setTimeout(function() {
+                scroll = $(document).scrollTop();
+                var target = (scroll > height)? (scroll > team && scroll < about)?    $("html, body").animate({ scrollTop: about   }, 1000):
+                                                (scroll > about && scroll < contact)? $("html, body").animate({ scrollTop: contact }, 1000):
+                                                (scroll > contact)?                   $("html, body").animate({ scrollTop: team    }, 1000): null:
+
+                             (scroll < height)? (scroll < team)?                      $("html, body").animate({ scrollTop: contact }, 1000):
+                                                (scroll < about)?                     $("html, body").animate({ scrollTop: team    }, 1000):
+                                                (scroll < contact)?                   $("html, body").animate({ scrollTop: about   }, 1000): null: null;
+            }, 20);
+            height = scroll;
         });
+    });
 
     </script>
-
 </body>
 </html>
