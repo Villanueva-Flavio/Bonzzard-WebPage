@@ -16,12 +16,15 @@
     margin: 1%;
     transition: ease-in-out 0.5s;
     border: 2px solid black;
+    border-radius: 5px;
+    color: white;
 }
 
 .card-container:hover{
     transform: scale(1.1);
     transition: ease-in-out 0.5s;
     box-shadow: 0 0 40px 40px rgba(200, 200, 0, 0.2), 0 0 100000px 100000px rgba(0, 0, 0, 0.75);
+    color: black;
 }
 
 .card-container:hover > .overlap-background{
@@ -41,6 +44,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: 9998;
 }
 
 .title{
@@ -52,6 +56,7 @@
     text-shadow: 2px 2px 4px #000000;
     font-family: 'Tektur', sans-serif;
     position: absolute;
+    z-index: 9999;
 }
 
 .info-container{
@@ -69,8 +74,8 @@
     align-items: center;
 }
 
+
 .description-text{
-    color: white;
     font-family: 'Roboto Condensed', sans-serif;
     margin-left: 10%;
     margin-right: 10%;
@@ -89,7 +94,6 @@
 }
 
 .stack-title{
-    color: white;
     font-family: 'Fredoka', sans-serif;
     font-size: 2rem;
     margin-top: 3%;
@@ -128,7 +132,6 @@
 }
 
 .date-title{
-    color: white;
     font-family: 'Fredoka', sans-serif;
     font-size: 2rem;
     margin: 0;
@@ -141,7 +144,6 @@
 }
 
 .repository-title{
-    color: white;
     font-family: 'Fredoka', sans-serif;
     font-size: 1.5rem;
     margin: 0;

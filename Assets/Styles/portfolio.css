@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fredoka:wght@300..700&family=Rampart+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #333333;
+
+}
+
+#Header{
+    background: linear-gradient(180deg, black, #333333);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+}
+
+#image-source {
+    margin-left: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    margin-right: 10px;
+    object-fit: cover;
+    box-shadow: 1px 1px 10px rgba(255, 255, 0, 0.5);
+}
+
+.name-container{
+    justify-content: center;
+    font-family: 'Rampart One', sans-serif;
+    text-shadow: 1px 1px 10px black;
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+.name-container h1{
+    font-size: 4vw;
+    color: white;
+    margin-bottom: 0;
+    margin-top: 75px;
+    margin-left: -50px;
+    text-shadow: 1px 1px 5px yellow;
+}
+
+.resume-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    right: 50px;
+    margin-right: 30px;
+}
+
+#resume-description{
+    color: white;
+    grid-area: 1/1/2/3;
+    font-family: 'Robot', sans-serif;
+    text-align: center;
+    text-shadow: 1px 1px 5px yellow;
+}
+
+#resume-download-button-es, #resume-download-button-en{
+    width: 90%;
+    height: 50%;
+    margin-left: 5%;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    box-shadow: 1px 1px 10px black;
+}
+
+#resume-download-button-es:hover, #resume-download-button-en:hover{
+    background-color: #0e29b0;
+    color: white;
+}
+
+#resume-download-button-es a, #resume-download-button-en a{
+    text-decoration: none;
+    color: black;
+}
+
+#resume-download-button-es{
+    grid-area: 2/1/3/2;
+}
+
+#resume-download-button-en{
+    grid-area: 2/2/3/3;
+}
+
+/* Aspect ratio Vertical */
+
+@media (max-aspect-ratio: 1/1) {
+    #image-source {
+        width: 250px;
+        height: 250px;
+    }
+
+    .name-container h1{
+        text-align: center;
+        font-size: 3em;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        white-space: wrap;
+    }
+
+    .resume-container{
+        position: relative;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        right: 0px;
+    }
+
+    #resume-description{
+        margin-top: 50px;
+        font-size: 1.1em;
+    }
+}
