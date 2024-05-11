@@ -6,6 +6,7 @@
 </head>
 <body>
     <!-- Header -->
+
     <div id="Header">
         <img id="image-source" src="/Assets/Styles/Elements/Images/Foto-fiubaton.jpg">
         <div class="name-container">
@@ -21,60 +22,76 @@
             </a>
         </div>
     </div>
+    
+    <h1 id="Question"> How can I help you? </h1>
+    <?php
+        for($i = 0; $i < 1000; $i++){
+            echo "<p>Test</p><br>";
+        }
+    ?>
 </body>
 
 
 <script>
-
-document.addEventListener("DOMContentLoaded", function() {
     const hiragana = "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん";
     const nameElement = document.getElementById('name');
+    const questionElement = document.getElementById('Question');
     const originalName = nameElement.innerText;
-    const delayBeforeStart = 100;
+    const originalQuestion = questionElement.innerText;
+    const delayBeforeStart = 200;
     const durationPerLetter = 2000;
     const delayBetweenLetters = 20;
 
-    function generateRandomNameWithDelay() {
-        let randomName = '';
-        for (let i = 0; i < originalName.length; i++) {
-            if (originalName[i] !== ' ') {
-                if(originalName[i] == '\n'){
-                    randomName += '\n';
+    function generateRandomTextWithDelay(originalText) {
+        let randomText = '';
+        for (let i = 0; i < originalText.length; i++) {
+            if (originalText[i] !== ' ') {
+                if (originalText[i] == '\n') {
+                    randomText += '\n';
                     continue;
                 }
                 const randomIndex = Math.floor(Math.random() * hiragana.length);
-                randomName += hiragana[randomIndex];
-                
-            } else if(originalName[i] == ' '){
-                randomName += ' ';
+                randomText += hiragana[randomIndex];
+            } else if (originalText[i] == ' ') {
+                randomText += ' ';
             }
         }
-        return randomName;
+        return randomText;
     }
 
-    function animateNameLetterByLetter() {
+    function animateTextLetterByLetter(targetElement, originalText) {
         let currentIndex = 0;
-        function updateName(timestamp) {
-            if (currentIndex < originalName.length) {
+        function updateText(timestamp) {
+            if (currentIndex < originalText.length) {
                 const elapsed = timestamp - startTime;
                 const progress = elapsed / durationPerLetter;
                 if (progress >= currentIndex * delayBetweenLetters / durationPerLetter) {
-                    const newName = originalName.substr(0, currentIndex + 1) + generateRandomNameWithDelay().substr(currentIndex + 1);
-                    nameElement.innerText = newName;
+                    const newText = originalText.substr(0, currentIndex + 1) + generateRandomTextWithDelay(originalText).substr(currentIndex + 1);
+                    targetElement.innerText = newText;
                     currentIndex++;
                 }
-                requestAnimationFrame(updateName);
+                requestAnimationFrame(updateText);
             } else {
-                nameElement.innerText = originalName;
+                targetElement.innerText = originalText;
             }
         }
         const startTime = performance.now();
-        requestAnimationFrame(updateName);
+        requestAnimationFrame(updateText);
     }
-    nameElement.innerText = generateRandomNameWithDelay();
-    setTimeout(animateNameLetterByLetter, delayBeforeStart);
+
+    nameElement.innerText = generateRandomTextWithDelay(originalName);
+    questionElement.innerText = generateRandomTextWithDelay(originalQuestion);
+
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+        animateTextLetterByLetter(nameElement, originalName);
+        animateTextLetterByLetter(questionElement, originalQuestion);
+    }, delayBeforeStart);
 });
 
-
-
+document.getElementById('Question').addEventListener("click", function() {
+    setTimeout(function() {
+        animateTextLetterByLetter(questionElement, originalQuestion);
+    }, delayBeforeStart);
+});
 </script>

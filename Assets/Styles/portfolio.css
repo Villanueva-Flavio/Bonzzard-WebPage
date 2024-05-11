@@ -34,6 +34,7 @@ body{
     font-family: 'Rampart One', sans-serif;
     text-shadow: 1px 1px 10px black;
     white-space: nowrap;
+    margin-top: -2.5%;
     max-width: 100%;
 }
 
@@ -120,4 +121,14 @@ body{
         margin-top: 50px;
         font-size: 1.1em;
     }
+}
+
+#Question{
+    font-family: 'Rampart One', sans-serif;
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    font-size: 4em;
+    text-shadow: 1px 1px 5px yellow;
 }
