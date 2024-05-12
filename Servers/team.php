@@ -11,9 +11,10 @@
 <body>
     <?php
         /* All sections separated */
-        require_once "../Assets/Includes/TeamSectionOne.php";
-        require_once "../Assets/Includes/TeamSectionTwo.php";
-        require_once "../Assets/Includes/TeamSectionThree.php";
+        
+        require_once "../Assets/Modules/Team/TeamSectionOne.php";
+        require_once "../Assets/Modules/Team/TeamSectionTwo.php";
+        require_once "../Assets/Modules/Team/TeamSectionThree.php";
         
         /* MailSender functions */
         require_once "../Assets/Includes/MailSender.php";

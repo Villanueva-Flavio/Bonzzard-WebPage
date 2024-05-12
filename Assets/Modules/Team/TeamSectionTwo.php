@@ -1,3 +1,4 @@
+<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/Assets/Includes/Utils/die.php"); ?>
 <div id="About" class="section">
     <p class="title">About Bonzzard</p>
     <div class="about-container">

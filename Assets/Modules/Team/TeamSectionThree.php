@@ -1,3 +1,4 @@
+<?php include_once($_SERVER['DOCUMENT_ROOT'] . "/Assets/Includes/Utils/die.php"); ?>
 <div id="Contact" class="section">
     <p class="title">Contact Us</p>
     <div class="contact-container">
@@ -17,21 +18,3 @@
         </form>
     </div>
 </div>
-
-<?php
-
-    require_once "../Assets/Includes/MailSender.php";
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $message = $_POST['message'];
-
-        $to = "noreply.bonzzard@gmail.com";
-        $subject = "[BONZZARD] $name";
-        $txt = "You have received an e-mail from ".$name.".\n e-mail: ".$email."\n\n".$message;
-        
-        sendEmail($to, $subject, $txt);
-        header("Location: {$_SERVER['REQUEST_URI']}");
-        exit();
-    }
-?>

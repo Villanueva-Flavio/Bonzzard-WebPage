@@ -2,19 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fredoka:wght@300..700&family=Rampart+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
 
 body{
-    margin: 0;
-    padding: 0;
-    background-color: #333333;
-
+    z-index: -2;
+    position: relative;
+    background: #111;
 }
 
 #Header{
-    background: linear-gradient(180deg, black, #333333);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
     overflow: hidden;
+    position: relative;
 }
 
 #image-source {
@@ -55,6 +54,7 @@ body{
     grid-row-gap: 0px;
     right: 50px;
     margin-right: 30px;
+    z-index: 0;
 }
 
 #resume-description{
@@ -68,11 +68,13 @@ body{
 #resume-download-button-es, #resume-download-button-en{
     width: 90%;
     height: 50%;
-    margin-left: 5%;
     border-radius: 5px;
     font-family: 'Roboto', sans-serif;
     font-size: 1.5em;
     box-shadow: 1px 1px 10px black;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
 }
 
 #resume-download-button-es:hover, #resume-download-button-en:hover{
@@ -131,4 +133,107 @@ body{
     margin-left: 50px;
     font-size: 4em;
     text-shadow: 1px 1px 5px yellow;
+}
+
+.target-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.target{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 30%;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(255, 255, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.target h1{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 2em;
+    text-shadow: 1px 1px 5px black;
+}
+
+.first{
+    background: url('/Assets/Styles/Elements/Backgrounds/Web_dev.jpg');
+    animation: moveBackground1 20s linear infinite;
+}
+
+.second{
+    background-image: url('/Assets/Styles/Elements/Backgrounds/Game_dev.jpg');
+    animation: moveBackground2 20s linear infinite;
+}
+
+.third{
+    background-image: url('/Assets/Styles/Elements/Backgrounds/Terminal_dev.jpg');
+    animation: moveBackground3 20s linear infinite;
+}
+
+.fourth{
+    background-image: url('/Assets/Styles/Elements/Backgrounds/Rent_server.jpg');
+    animation: moveBackground4 20s linear infinite;
+}
+
+.first, .second, .third, .fourth{
+    background-size: 150%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#link{
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+}
+
+@keyframes moveBackground1{
+    0%     {background-position: 0%   0%;}
+    30%    {background-position: 50% 30%;}
+    30.001%{background-position: 80% 0%;}
+    60%    {background-position: 30% 30%;}
+    60.001%{background-position: 30% 90%;}
+    100%   {background-position: 0%  40%;}
+}
+
+@keyframes moveBackground2{
+    0%     {background-position: 15% 65%;}
+    10%    {background-position: 0%  40%;}
+    10.001%{background-position: 75%  0%;}
+    40%    {background-position: 30% 40%;}
+    40.001%{background-position: 0%   0%;}
+    70%    {background-position: 50% 30%;}
+    70.001%{background-position: 30% 90%;}
+}
+
+@keyframes moveBackground3{
+    0%     {background-position: 30% 90%;}
+    15%    {background-position: 0%  40%;}
+    15.001%{background-position: 0%   0%;}
+    40%    {background-position: 50% 30%;}
+    40.001%{background-position: 70% 0%;}
+    80%    {background-position: 30% 40%;}
+    80.01% {background-position: 0%  40%;}
+}
+
+@keyframes moveBackground4{
+    0%     {background-position: 100% 0%;}
+    25%    {background-position: 50% 30%;}
+    25.001%{background-position: 30% 40%;}
+    50%    {background-position: 0%   0%;}
+    50.001%{background-position: 30% 90%;}
+    90%    {background-position: 0%  40%;}
 }
