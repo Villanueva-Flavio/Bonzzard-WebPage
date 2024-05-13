@@ -9,7 +9,7 @@
 <?php
     $die_prevent = true;
 
-    include $_SERVER['DOCUMENT_ROOT'].'/Assets/Includes/Utils/DeviconDict.php';
+    include $_SERVER['DOCUMENT_ROOT'].'/Assets/Includes/Utils/deviconDict.php';
     include $_SERVER['DOCUMENT_ROOT'].'/Assets/Includes/db.php';
     echo "<div id='cards-container'>";
     function getCard($title, $image, $description, $stack, $date, $repository, $deviconDict){ include $_SERVER['DOCUMENT_ROOT'].'/Assets/Modules/Card/CardWorks.php'; }

@@ -57,10 +57,14 @@
 
         </div>
     </div>
+    <?php
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+    ?>
     <!-- Header -->
     <?php require_once($_SERVER['DOCUMENT_ROOT']."/Assets/Modules/Portfolio/header.php"); ?>
     <h1 id="Question"> How can I help you? </h1>
-    <?php require_once($_SERVER['DOCUMENT_ROOT']."/Assets/Modules/Portfolio/Contact.php"); ?>
+    <?php require_once($_SERVER['DOCUMENT_ROOT']."/Assets/Modules/Portfolio/contact.php"); ?>
     <h1 id="Question"> Or Contact me: </h1>
     <h1 id="Question"> About Me: </h1>
     <h1 id="Question"> Previous works:</h1>
