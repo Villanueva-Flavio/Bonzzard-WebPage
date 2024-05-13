@@ -1,14 +1,3 @@
-<?php
-
-    /* 4 squares
-        WEB DEVELOPMENT | GAME DEVELOPMENT | MOBILE & TERMINAL APPLICATIONS / BOTS | RENT A SERVER */
-
-    /* Or Contact me
-    Phone, Discord, Whatsapp, LinkedIn, Mail */
-?>
-
-
-
 <div class="target-container">
     <button class="target first">
         <h1 class="target-title">WEB DEVELOPMENT</h1>

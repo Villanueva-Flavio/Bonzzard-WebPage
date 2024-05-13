@@ -9,9 +9,10 @@
 <?php
     $die_prevent = true;
 
-    include '../../Assets/Includes/Utils/deviconDict.php';
-    include '../../Assets/Includes/db.php';
-    function getCard($title, $image, $description, $stack, $date, $repository, $deviconDict){ include 'CardWorks.php'; }
+    include $_SERVER['DOCUMENT_ROOT'].'/Assets/Includes/Utils/DeviconDict.php';
+    include $_SERVER['DOCUMENT_ROOT'].'/Assets/Includes/db.php';
+    echo "<div id='cards-container'>";
+    function getCard($title, $image, $description, $stack, $date, $repository, $deviconDict){ include $_SERVER['DOCUMENT_ROOT'].'/Assets/Modules/Card/CardWorks.php'; }
     $sql = "SELECT * FROM ".getenv('WORK_TABLE');
     $result = $conn->query($sql);
     
@@ -20,6 +21,7 @@
             getCard($row['title'], $row['image'], $row['description'], explode(',', strtolower($row['stack'])), $row['date'], $row['repository'], $deviconDict);  
         }
     }
+    echo "</div>";
 ?>
 
 <!--

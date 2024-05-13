@@ -17,18 +17,18 @@
     transition: ease-in-out 0.5s;
     border: 2px solid black;
     border-radius: 5px;
-    color: white;
+    color: grey;
 }
 
 .card-container:hover{
     transform: scale(1.1);
     transition: ease-in-out 0.5s;
     box-shadow: 0 0 40px 40px rgba(200, 200, 0, 0.2), 0 0 100000px 100000px rgba(0, 0, 0, 0.75);
-    color: black;
+    color: white;
 }
 
 .card-container:hover > .overlap-background{
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)); /* EDITAR COLORES */
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1)); /* EDITAR COLORES */
 }
 
 .image-container{
@@ -63,7 +63,6 @@
     width: 100%;
     height: 200px;
     position: relative;
-    margin-top: -20px;
     z-index: 3;
 }
 
@@ -155,4 +154,10 @@
     height: 80px;
     filter: grayscale(1);
     transition: 0.5s ease-in-out;
+}
+
+.devicon:hover{
+    box-shadow: 1px 1px 10px yellow;
+    padding: 10px;
+    border-radius: 50%;
 }

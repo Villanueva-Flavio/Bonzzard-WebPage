@@ -1,9 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fredoka:wght@300..700&family=Rampart+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.text{
+    font-family: 'Roboto Condensed', sans-serif;
+    color: rgba(0, 0, 0, 0.5);
+    transition: 1s;
+    padding: 0 5px;
+    user-select: none;
+    cursor: default;
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate{
+    0% {transform: translateX(50%);}
+    50% {transform: translateX(-100%);}
+    100% {transform: translateX(50%);}
+}
+
+.text:hover{
+    transition: 0s;
+    color: #0f0;
+    text-shadow: 0 0 10px #0f0;
+}
+
+
+#background-container{
+    bottom: 0;
+    position: sticky;
+    width: 100%;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: -1;
+    background: transparent;
+}
+
+#background{
+    margin-top: -12%;
+    height: 350px;
+    overflow: hidden;
+}
+
+#background-container .row{
+    margin-top: 0%;
+    margin-left: -20%;
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+    font-size: 64px;
+    transform: rotate(-20deg);
+}
+
 body{
-    z-index: -2;
+    overflow-x: hidden;
     position: relative;
+    z-index: -3;
     background: #111;
 }
 
@@ -95,41 +152,11 @@ body{
     grid-area: 2/2/3/3;
 }
 
-/* Aspect ratio Vertical */
-
-@media (max-aspect-ratio: 1/1) {
-    #image-source {
-        width: 250px;
-        height: 250px;
-    }
-
-    .name-container h1{
-        text-align: center;
-        font-size: 3em;
-        margin-right: 20px;
-        margin-bottom: 20px;
-        margin-left: 20px;
-        white-space: wrap;
-    }
-
-    .resume-container{
-        position: relative;
-        margin-top: 50px;
-        margin-bottom: 20px;
-        right: 0px;
-    }
-
-    #resume-description{
-        margin-top: 50px;
-        font-size: 1.1em;
-    }
-}
 
 #Question{
     font-family: 'Rampart One', sans-serif;
     color: white;
     margin-top: 50px;
-    margin-bottom: 50px;
     margin-left: 50px;
     font-size: 4em;
     text-shadow: 1px 1px 5px yellow;
@@ -139,9 +166,9 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-bottom: 200px;
     margin-top: 50px;
-    margin-bottom: 50px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     width: 100%;
 }
 
@@ -154,11 +181,24 @@ body{
     margin-right: 50px;
     margin-top: 50px;
     margin-bottom: 50px;
-    width: 30%;
-    height: 250px;
+    width: 25vh;
+    height: 25vh;
     border-radius: 10px;
-    box-shadow: 1px 1px 10px rgba(255, 255, 0, 0.5);
+    box-shadow: 1px 1px 10px rgba(255, 255, 0, 0.7);
     background: rgba(0, 0, 0, 0.5);
+    transition: ease-in-out 0.5s;
+}
+
+.target:hover{
+    transform: scale(1.1);
+    transition: ease-in-out 0.5s;
+    box-shadow: 0 0 40px 400px rgba(200, 200, 0, 0.005), 0 0 100000px 100000px rgba(0, 0, 0, 0.75);
+    color: white;
+}
+
+.target:hover > .overlap-background{
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1)); /* EDITAR COLORES */
+    transition: ease-in-out 0.5s;
 }
 
 .target h1{
@@ -236,4 +276,43 @@ body{
     50%    {background-position: 0%   0%;}
     50.001%{background-position: 30% 90%;}
     90%    {background-position: 0%  40%;}
+}
+
+/* Aspect ratio Vertical */
+
+@media (max-aspect-ratio: 1/1) {
+    #background-container{
+        bottom: -140%;
+    }
+
+    #image-source {
+        width: 250px;
+        height: 250px;
+    }
+
+    .name-container h1{
+        text-align: center;
+        font-size: 3em;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        white-space: wrap;
+    }
+
+    .resume-container{
+        position: relative;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        right: 0px;
+    }
+
+    #resume-description{
+        margin-top: 50px;
+        font-size: 1.1em;
+    }
+    
+    .target{
+        width: 200px;
+        height: 200px;
+    }
 }

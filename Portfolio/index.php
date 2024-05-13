@@ -4,78 +4,67 @@
     <title>Bonzzard > Portfolio</title>
     <link rel="stylesheet" href="/Assets/Styles/portfolio.css">
 </head>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-    *{
-        margin: 0;
-        padding: 0;
-    }
-
-    .text{
-        font-family: 'Roboto Condensed', sans-serif;
-        color: rgba(0, 0, 0, 0.5);
-        transition: 1s;
-        padding: 0 5px;
-        user-select: none;
-        cursor: default;
-        animation: animate 10s linear infinite;
-    }
-    
-    @keyframes animate{
-        0% {transform: translateX(50%);}
-        50% {transform: translateX(-100%);}
-        100% {transform: translateX(50%);}
-    }
-
-    .text:hover{
-        transition: 0s;
-        color: #0f0;
-        text-shadow: 0 0 10px #0f0;
-    }
-
-    #background{
-        /* margin-top: 40%; */
-        bottom: -40%;
-        position: absolute;
-        width: 100%;
-        height: 50%;
-        background-color: #111;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        z-index: -1;
-    }
-
-    #background .row{
-        margin-top: 0%;
-        margin-left: -20%;
-        width: 100%;
-        display: flex;
-        padding: 10px 0;
-        font-size: 64px;
-        transform: rotate(-20deg);
-    }
-</style>
 
 <body>
+    <?php /* require_once($_SERVER['DOCUMENT_ROOT']."/Assets/Modules/Portfolio/background.php"); */ ?>
+
+    <style>
+        .bgAnimation{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 250vh;
+            display: grid;
+            grid-template-columns: repeat(30, 1fr);
+            grid-template-rows: repeat(30,1fr);
+            background: #111;
+            filter: saturate(2);
+            overflow: hidden;
+            z-index: -3;
+        }
+
+        .colorBox{
+            z-index: 2;
+            filter: brightness(1.1);
+            transition: 2s ease;
+            position: relative;
+            margin: 2px;
+            background: #121212;
+        }
+
+        .colorBox:hover{
+            background: yellow;
+            transition-duration: 0s;
+            box-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 40px yellow, 0 0 80px yellow;
+        }
+
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const bgAnimation = document.getElementById('bgAnimation');
+            const numberOfColorBoxes = 800;
+            for(let i = 0; i < numberOfColorBoxes; i++){
+                const colorBox = document.createElement('div');
+                colorBox.classList.add('colorBox');
+                bgAnimation.append(colorBox);
+            }
+        });
+    </script>
+    <div class="bgAnimation" id="bgAnimation">
+        <div class="backgroundAnim">
+
+        </div>
+    </div>
     <!-- Header -->
     <?php require_once($_SERVER['DOCUMENT_ROOT']."/Assets/Modules/Portfolio/header.php"); ?>
     <h1 id="Question"> How can I help you? </h1>
     <?php require_once($_SERVER['DOCUMENT_ROOT']."/Assets/Modules/Portfolio/Contact.php"); ?>
-    <div id="background">
-        <?php
-            for($i = 0; $i < 10; $i++) {
-                echo "<div class='row'>";
-                for($j = 0; $j < 80; $j++){
-                    $a = rand(0, 1);
-                    echo "<p class='text'>";
-                    echo "$a";
-                    echo "</p>";
-                }
-                echo "</div>";
-            }
-        ?>
-    </div>
+    <h1 id="Question"> Or Contact me: </h1>
+    <h1 id="Question"> About Me: </h1>
+    <h1 id="Question"> Previous works:</h1>
+    <?php require_once($_SERVER['DOCUMENT_ROOT']."/Assets/Modules/Card/CardContainer.php"); ?>
 </body>
 
 <script>
